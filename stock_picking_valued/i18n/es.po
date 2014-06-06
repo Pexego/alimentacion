@@ -1,0 +1,83 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_valued
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-10 16:47+0000\n"
+"PO-Revision-Date: 2012-07-10 18:53+0100\n"
+"Last-Translator: Marta <marta@pexego.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_valued
+#: sql_constraint:sale.order:0
+msgid "Order Reference must be unique per Company!"
+msgstr "¡La referencia del pedido debe ser única por compañía!"
+
+#. module: stock_picking_valued
+#: field:stock.picking,amount_total:0
+msgid "Total"
+msgstr "Total"
+
+#. module: stock_picking_valued
+#: field:stock.picking,amount_discounted:0
+msgid "Discounted"
+msgstr "Descuento total"
+
+#. module: stock_picking_valued
+#: field:res.partner,valued_picking:0
+#: field:stock.picking,valued_picking:0
+msgid "Valued picking"
+msgstr "Albarán valorado"
+
+#. module: stock_picking_valued
+#: help:stock.picking,valued_picking:0
+msgid "If it sets to True, customer wants valued picking"
+msgstr "Si está marcado, el cliente quiere albarán valorado"
+
+#. module: stock_picking_valued
+#: field:stock.picking,amount_tax:0
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: stock_picking_valued
+#: field:stock.picking,amount_gross:0
+msgid "Amount gross"
+msgstr "Importe bruto"
+
+#. module: stock_picking_valued
+#: sql_constraint:stock.picking:0
+msgid "Reference must be unique per Company!"
+msgstr "¡La referencia debe ser única por compañía!"
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_stock_picking
+msgid "Picking List"
+msgstr "Albarán"
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: stock_picking_valued
+#: help:res.partner,valued_picking:0
+msgid "Marks this partner wants valued pickings"
+msgstr "Marcar si el cliente quiere albaranes valorados."
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: stock_picking_valued
+#: field:stock.picking,amount_untaxed:0
+msgid "Untaxed Amount"
+msgstr "Base Imponible"
+

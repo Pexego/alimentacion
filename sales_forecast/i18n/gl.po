@@ -1,0 +1,467 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* cost_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-30 08:40+0000\n"
+"PO-Revision-Date: 2013-05-30 10:44+0100\n"
+"Last-Translator: Marta <marta@pexego.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: cost_management
+#: field:sales.forecast.line,total_qty:0
+msgid "Total Qty."
+msgstr "Cant. Total"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Apr        €"
+msgstr "Abr        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "My Sales Forecast"
+msgstr "As miñas previsións de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jul        €"
+msgstr "Xul        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Aug       Qty"
+msgstr "Ago       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "February"
+msgstr "Febreiro"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Totals"
+msgstr "Totais"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Analytic account"
+msgstr "Conta analítica"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: field:sales.forecast,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "October"
+msgstr "Outubro"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: selection:sales.forecast,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Sep       Qty"
+msgstr "Set       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Dec        €"
+msgstr "Dec        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Oct €"
+msgstr "Out €"
+
+#. module: cost_management
+#: view:get.sales.forecast:0
+msgid "Get Sales Forecast"
+msgstr "Xerar previsión de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Sep        €"
+msgstr "Set        €"
+
+#. module: cost_management
+#: field:sales.forecast.line,apr_qty:0
+#: field:sales.forecast.line,aug_qty:0
+#: field:sales.forecast.line,dec_qty:0
+#: field:sales.forecast.line,feb_qty:0
+#: field:sales.forecast.line,jan_qty:0
+#: field:sales.forecast.line,jul_qty:0
+#: field:sales.forecast.line,jun_qty:0
+#: field:sales.forecast.line,mar_qty:0
+#: field:sales.forecast.line,may_qty:0
+#: field:sales.forecast.line,nov_qty:0
+#: field:sales.forecast.line,oct_qty:0
+#: field:sales.forecast.line,sep_qty:0
+msgid "Qty"
+msgstr "Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Oct        €"
+msgstr "Out        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Oct       Qty"
+msgstr "Oct       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "September"
+msgstr "Setembro"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Nov        €"
+msgstr "Nov        €"
+
+#. module: cost_management
+#: field:sales.forecast.line,product_id:0
+msgid "Product"
+msgstr "Produto"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "March"
+msgstr "Marzo"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "May"
+msgstr "Maio"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: field:sales.forecast,company_id:0
+msgid "Company"
+msgstr "compañía"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Mar €"
+msgstr "Mar €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: field:sales.forecast,commercial_id:0
+msgid "Commercial"
+msgstr "Comercial"
+
+#. module: cost_management
+#: field:get.sales.forecast,percent_increase:0
+msgid "% Increase"
+msgstr "% Incremento"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Mar        €"
+msgstr "Mar        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jun        €"
+msgstr "Xun        €"
+
+#. module: cost_management
+#: field:sales.forecast.line,apr_amount:0
+#: field:sales.forecast.line,aug_amount:0
+#: field:sales.forecast.line,dec_amount:0
+#: field:sales.forecast.line,feb_amount:0
+#: field:sales.forecast.line,jan_amount:0
+#: field:sales.forecast.line,jul_amount:0
+#: field:sales.forecast.line,jun_amount:0
+#: field:sales.forecast.line,mar_amount:0
+#: field:sales.forecast.line,may_amount:0
+#: field:sales.forecast.line,nov_amount:0
+#: field:sales.forecast.line,oct_amount:0
+#: field:sales.forecast.line,sep_amount:0
+msgid "€"
+msgstr "€"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "June"
+msgstr "Xuño"
+
+#. module: cost_management
+#: field:sales.forecast,date:0
+msgid "Date"
+msgstr "Data"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jul       Qty"
+msgstr "Xul       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Apr       Qty"
+msgstr "Abr       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jan        €"
+msgstr "Xan        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: selection:sales.forecast,state:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Feb €."
+msgstr "Feb €."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jan €"
+msgstr "Xan €"
+
+#. module: cost_management
+#: model:ir.actions.act_window,name:cost_management.action_view_sales_forecast_form
+#: view:sales.forecast:0
+msgid "Sales Forecast"
+msgstr "Previsións de Vendas"
+
+#. module: cost_management
+#: field:get.sales.forecast,account_id:0
+#: field:sales.forecast,analytic_id:0
+msgid "Account"
+msgstr "Conta"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "May        €"
+msgstr "Mai        €"
+
+#. module: cost_management
+#: field:get.sales.forecast,name:0
+#: field:sales.forecast,name:0
+#: field:sales.forecast.line,name:0
+msgid "Name"
+msgstr "Nome"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Aug €"
+msgstr "Ago €"
+
+#. module: cost_management
+#: model:ir.model,name:cost_management.model_sales_forecast
+#: field:sales.forecast.line,sales_forecast_id:0
+msgid "Sales forecast"
+msgstr "Previsións de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: field:sales.forecast.line,total_amount:0
+msgid "Total €"
+msgstr "Total €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "January"
+msgstr "Xaneiro"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Nov €"
+msgstr "Nov €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "November"
+msgstr "Novembro"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: field:sales.forecast,sales_forecast_lines:0
+msgid "Lines"
+msgstr "Liñas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Aug        €"
+msgstr "Ago        €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Dec €"
+msgstr "Dec €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Nov       Qty"
+msgstr "Nov       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "April"
+msgstr "Abril"
+
+#. module: cost_management
+#: model:ir.model,name:cost_management.model_get_sales_forecast
+msgid "Preload a sales forecast"
+msgstr "Xerar previsión de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Feb       Qty"
+msgstr "Feb       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Dec       Qty"
+msgstr "Dec       Cant."
+
+#. module: cost_management
+#: model:ir.actions.act_window,name:cost_management.get_sales_forecast_action
+#: model:ir.ui.menu,name:cost_management.menu_get_sales_forecast
+msgid "Generate Sales Forecast"
+msgstr "Xerar previsión de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "July"
+msgstr "Xullo"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jun       Qty"
+msgstr "Xuñ       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "May €"
+msgstr "Mai €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Mar       Qty"
+msgstr "Mar       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jan       Qty"
+msgstr "Xan       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Set to Draft"
+msgstr "Volver a borrador"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Sep €"
+msgstr "Set €"
+
+#. module: cost_management
+#: model:ir.ui.menu,name:cost_management.menu_sales_forecast
+#: model:ir.ui.menu,name:cost_management.menu_sales_forecast_all
+#: view:sales.forecast:0
+msgid "Sales Forecasts"
+msgstr "Previsións de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Apr €"
+msgstr "Abr €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "December"
+msgstr "Decembro"
+
+#. module: cost_management
+#: model:ir.model,name:cost_management.model_sales_forecast_line
+msgid "Sales forecast lines"
+msgstr "Liñas de previsión"
+
+#. module: cost_management
+#: model:res.groups,name:cost_management.group_approve_sales_forecast
+msgid "Sales forecast / Manager"
+msgstr "Previsión de Vendas / Xerente"
+
+#. module: cost_management
+#: view:get.sales.forecast:0
+msgid "Generate"
+msgstr "Xerar"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jun €"
+msgstr "Xuñ €"
+
+#. module: cost_management
+#: view:sales.forecast:0
+#: selection:sales.forecast,state:0
+msgid "Done"
+msgstr "Realizado"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Search  Sales Forecast"
+msgstr "Buscar Previsións de vendas"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Feb        €"
+msgstr "Feb        €"
+
+#. module: cost_management
+#: view:get.sales.forecast:0
+#: view:sales.forecast:0
+#: selection:sales.forecast,state:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "May       Qty"
+msgstr "Mai       Cant."
+
+#. module: cost_management
+#: view:sales.forecast:0
+msgid "Jul €"
+msgstr "Xul €"
+

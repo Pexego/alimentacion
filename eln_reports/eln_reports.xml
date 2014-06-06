@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <report
+            string="Sheet product"
+            model="product.product"
+            
+            name="sheet.product.jasper"
+            rml="eln_reports/report/sheet_product.jrxml"
+            id="report_sheet_products_jasper"
+            menu="True"
+            auto="True"
+            />
+         <report
+            string="Product Logistics sheet"
+            model="product.product"
+            
+            name="product.logistics.jasper"
+            rml="eln_reports/report/product_logistics_sheet.jrxml"
+            id="report_product_logistics_sheet_jasper"
+            menu="True"
+            auto="True"
+            />
+         <report
+            string="Product datasheet"
+            model="product.product"
+            
+            name="product.datasheet.jasper"
+            rml="eln_reports/report/product_datasheet.jrxml"
+            id="report_product_datasheet_jasper"
+            menu="True"
+            auto="True"
+            />
+        <report
+            string="Picking"
+            model="stock.picking"
+            
+            name="Picking"
+            rml="eln_reports/report/stock_picking.jrxml"
+            id="stock_picking_report_jasper"
+            menu="True"
+            auto="True"
+            />
+        <report
+            string="Invoice"
+            model="account.invoice"
+            
+            name="Invoice"
+            rml="eln_reports/report/invoice.jrxml"
+            id="invoice_report_jasper"
+            menu="True"
+            auto="True"
+            />
+       <report  
+            string="Control part"
+            model="mrp.production"
+            name="control.part.jasper"
+            rml="eln_reports/report/control_part.jrxml"
+            id="report_control_part_jasper"
+            menu="True"
+            auto="True"/>
+
+       <report
+            string="Purchase Order"
+            model="purchase.order"
+            name="purchase.order.jasper"
+            rml="eln_reports/report/purchase_order.jrxml"
+            id="purchase.report_purchase_order"
+            menu="True"
+            header="False"
+            auto="True"/>
+
+    </data>
+</openerp>

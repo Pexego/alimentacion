@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: elnogal\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-03 17:11+0100\n"
+"PO-Revision-Date: 2013-12-03 17:17+0100\n"
+"Last-Translator: marta <marta@pexego.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /tmp/tmp.A1mLWokzwv:771
+#: /tmp/tmp.A1mLWokzwv:1019
+#: /tmp/tmp.A1mLWokzwv:1267
+msgid "ORDER Nº "
+msgstr "PEDIDO"
+
+#: /tmp/tmp.A1mLWokzwv:779
+#: /tmp/tmp.A1mLWokzwv:1027
+#: /tmp/tmp.A1mLWokzwv:1275
+msgid "DATE "
+msgstr "FECHA"
+
+#: /tmp/tmp.A1mLWokzwv:787
+#: /tmp/tmp.A1mLWokzwv:1035
+#: /tmp/tmp.A1mLWokzwv:1283
+msgid "Delivery place"
+msgstr "DIRECCIÓN DE ENTREGA"
+
+#: /tmp/tmp.A1mLWokzwv:791
+#: /tmp/tmp.A1mLWokzwv:1039
+#: /tmp/tmp.A1mLWokzwv:1287
+msgid "Supplier data"
+msgstr "DATOS PROVEEDOR"
+
+#: /tmp/tmp.A1mLWokzwv:823
+#: /tmp/tmp.A1mLWokzwv:875
+#: /tmp/tmp.A1mLWokzwv:1071
+#: /tmp/tmp.A1mLWokzwv:1123
+#: /tmp/tmp.A1mLWokzwv:1319
+#: /tmp/tmp.A1mLWokzwv:1371
+msgid "Tlf: "
+msgstr ""
+
+#: /tmp/tmp.A1mLWokzwv:827
+#: /tmp/tmp.A1mLWokzwv:871
+#: /tmp/tmp.A1mLWokzwv:1075
+#: /tmp/tmp.A1mLWokzwv:1119
+#: /tmp/tmp.A1mLWokzwv:1323
+#: /tmp/tmp.A1mLWokzwv:1367
+msgid "Fax: "
+msgstr ""
+
+#: /tmp/tmp.A1mLWokzwv:831
+#: /tmp/tmp.A1mLWokzwv:847
+#: /tmp/tmp.A1mLWokzwv:1079
+#: /tmp/tmp.A1mLWokzwv:1095
+#: /tmp/tmp.A1mLWokzwv:1327
+#: /tmp/tmp.A1mLWokzwv:1343
+msgid "Email: "
+msgstr ""
+
+#: /tmp/tmp.A1mLWokzwv:895
+#: /tmp/tmp.A1mLWokzwv:1143
+#: /tmp/tmp.A1mLWokzwv:1391
+msgid "TOTAL: "
+msgstr ""
+
+#: /tmp/tmp.A1mLWokzwv:907
+#: /tmp/tmp.A1mLWokzwv:1155
+#: /tmp/tmp.A1mLWokzwv:1403
+msgid "Comments:"
+msgstr "Comentarios:"
+
+#: /tmp/tmp.A1mLWokzwv:919
+#: /tmp/tmp.A1mLWokzwv:1167
+#: /tmp/tmp.A1mLWokzwv:1415
+msgid "SIGN:"
+msgstr "FIRMA:"
+
+#: /tmp/tmp.A1mLWokzwv:923
+#: /tmp/tmp.A1mLWokzwv:1171
+#: /tmp/tmp.A1mLWokzwv:1419
+msgid "Mr. Miguel Quintas González"
+msgstr "Sr."
+
+#: /tmp/tmp.A1mLWokzwv:927
+#: /tmp/tmp.A1mLWokzwv:1175
+#: /tmp/tmp.A1mLWokzwv:1423
+msgid "Purchasing Manager"
+msgstr "Responsable de Compras"
+
+#: /tmp/tmp.A1mLWokzwv:931
+#: /tmp/tmp.A1mLWokzwv:1179
+#: /tmp/tmp.A1mLWokzwv:1427
+msgid "QUIVAL, S.A."
+msgstr ""
+
+#: /tmp/tmp.A1mLWokzwv:2168
+#: /tmp/tmp.A1mLWokzwv:2288
+#: /tmp/tmp.A1mLWokzwv:2408
+msgid "SUPPLIER REFERENCE"
+msgstr "REF. PROVEEDOR"
+
+#: /tmp/tmp.A1mLWokzwv:2176
+#: /tmp/tmp.A1mLWokzwv:2296
+#: /tmp/tmp.A1mLWokzwv:2416
+msgid "PRODUCT"
+msgstr "PRODUCTO"
+
+#: /tmp/tmp.A1mLWokzwv:2184
+#: /tmp/tmp.A1mLWokzwv:2304
+#: /tmp/tmp.A1mLWokzwv:2424
+msgid "QUANTITY"
+msgstr "CANTIDAD"
+
+#: /tmp/tmp.A1mLWokzwv:2192
+#: /tmp/tmp.A1mLWokzwv:2312
+#: /tmp/tmp.A1mLWokzwv:2432
+msgid "UNIT"
+msgstr "UNIDAD"
+
+#: /tmp/tmp.A1mLWokzwv:2200
+#: /tmp/tmp.A1mLWokzwv:2320
+#: /tmp/tmp.A1mLWokzwv:2440
+msgid "UNIT PRICE"
+msgstr "PRECIO UNIDAD"
+
+#: /tmp/tmp.A1mLWokzwv:2212
+#: /tmp/tmp.A1mLWokzwv:2332
+#: /tmp/tmp.A1mLWokzwv:2452
+msgid "DELIVERY DATE"
+msgstr "FECHA DE ENTREGA"
+
+#: /tmp/tmp.A1mLWokzwv:2220
+#: /tmp/tmp.A1mLWokzwv:2340
+#: /tmp/tmp.A1mLWokzwv:2460
+msgid "TOTAL PRICE"
+msgstr "PRECIO TOTAL"
+

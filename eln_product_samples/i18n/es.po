@@ -1,0 +1,154 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* eg_product_samples
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.0.3\n"
+"Report-Msgid-Bugs-To: support@openerp.com\n"
+"POT-Creation-Date: 2011-09-05 15:47+0000\n"
+"PO-Revision-Date: 2011-09-05 15:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: eg_product_samples
+#: model:ir.model,name:eg_product_samples.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: eg_product_samples
+#: sql_constraint:sale.order:0
+msgid "Order Reference must be unique !"
+msgstr "¡La referencia del pedido debe ser única!"
+
+#. module: eg_product_samples
+#: field:product.product,remaining_samples:0
+msgid "Samples"
+msgstr "Muestras"
+
+#. module: eg_product_samples
+#: code:addons/eg_product_samples/sale_order.py:53
+#, python-format
+msgid "Warning: There are no available remaining samples for this product (%s)' % (line_product.remaining_samples))\n"
+"                    }\n"
+"        return res\n"
+"\n"
+"\n"
+"    def product_id_change(self, cr, uid, ids, pricelist, product,qty=0,uom=False,qty_uos=0,uos=False,name=,partner_id=False, lang=False, update_tax=True, date_order=False, packaging=False, fiscal_position=False, flag=False, sample_ok=False):\n"
+"        \"\"\"\n"
+"            Extiendo el onchange del producto para controlar las muestras\n"
+"        \"\"\"\n"
+"        if product:\n"
+"            current_product = self.pool.get('product.product"
+msgstr "Warning: No quedan muestras disponibles para este producto (%s)' % (line_product.remaining_samples))\n"
+"                    }\n"
+"        return res\n"
+"\n"
+"\n"
+"    def product_id_change(self, cr, uid, ids, pricelist, product,qty=0,uom=False,qty_uos=0,uos=False,name=,partner_id=False, lang=False, update_tax=True, date_order=False, packaging=False, fiscal_position=False, flag=False, sample_ok=False):\n"
+"        \"\"\"\n"
+"            Extiendo el onchange del producto para controlar las muestras\n"
+"        \"\"\"\n"
+"        if product:\n"
+"            current_product = self.pool.get('product.product"
+
+#. module: eg_product_samples
+#: code:addons/eg_product_samples/sale_order.py:70
+#, python-format
+msgid "There are no available remaining samples"
+msgstr "No quedan muestras disponibles"
+
+#. module: eg_product_samples
+#: code:addons/eg_product_samples/sale_order.py:72
+#, python-format
+msgid "Warning: Quantity Exceeded.\n"
+"\n"
+"Line Quantity (%s) exceeds available remaining samples for this product (%s)...' % (real_product_qty, current_product.remaining_samples)))\n"
+"        \n"
+"        res = super(sale_order_line, self).product_id_change(cr, uid, ids, pricelist, product,qty,uom,qty_uos,uos,name,partner_id, lang, update_tax, date_order, packaging, fiscal_position, flag)\n"
+"        return res\n"
+"\n"
+"\n"
+"    _inherit = 'sale.order.line'\n"
+"    _columns = {\n"
+"        'sample_ok': fields.boolean('Sample?"
+msgstr "Aviso: Cantidad sobrepasada.\n"
+"\n"
+"La cantidad de la linea (%s) es superior a las muestras disponibles para este producto (%s)...' % (real_product_qty, current_product.remaining_samples)))\n"
+"        \n"
+"        res = super(sale_order_line, self).product_id_change(cr, uid, ids, pricelist, product,qty,uom,qty_uos,uos,name,partner_id, lang, update_tax, date_order, packaging, fiscal_position, flag)\n"
+"        return res\n"
+"\n"
+"\n"
+"    _inherit = 'sale.order.line'\n"
+"    _columns = {\n"
+"        'sample_ok': fields.boolean('Muestra?"
+
+#. module: eg_product_samples
+#: code:addons/eg_product_samples/sale_order.py:47
+#, python-format
+msgid "Line Quantity exceeds available remaining samples"
+msgstr "La cantidad de la linea supera las muestras disponibles"
+
+#. module: eg_product_samples
+#: constraint:product.product:0
+msgid "Error: Invalid ean code"
+msgstr "Error: Código EAN erróneo"
+
+#. module: eg_product_samples
+#: model:stock.location,name:eg_product_samples.stock_virtual_location_samples
+msgid "Muestras"
+msgstr "Muestras"
+
+#. module: eg_product_samples
+#: help:product.product,remaining_samples:0
+msgid "Remaining samples to give"
+msgstr "Muestras restantes por regalar"
+
+#. module: eg_product_samples
+#: code:addons/eg_product_samples/sale_order.py:70
+#, python-format
+msgid "Warning: There are no available remaining samples for this product (%s)...' % (current_product.remaining_samples)))\n"
+"                    elif real_product_qty >current_product.remaining_samples :\n"
+"                        raise osv.except_osv(_('Line Quantity exceeds available remaining samples"
+msgstr "Aviso: No existen muestras disponibles para este producto (%s)...' % (current_product.remaining_samples)))\n"
+"                    elif real_product_qty >current_product.remaining_samples :\n"
+"                        raise osv.except_osv(_('La cantidad de la linea supera las muestras disponibles"
+
+#. module: eg_product_samples
+#: field:sale.order.line,sample_ok:0
+msgid "Sample?"
+msgstr "Muestra?"
+
+#. module: eg_product_samples
+#: model:ir.model,name:eg_product_samples.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: eg_product_samples
+#: code:addons/eg_product_samples/sale_order.py:48
+#, python-format
+msgid "Warning: Quantity Exceeded.\n"
+"\n"
+"Line Quantity (%s) exceeds available remaining samples for this product (%s)' % (product_uom_qty, line_product.remaining_samples))\n"
+"                    }\n"
+"            else:\n"
+"                res['warning'] = {\n"
+"                    'title': _('There are no available remaining samples"
+msgstr "Aviso: Cantidad superada.\n"
+"\n"
+"La cantidad de la linea (%s) es mayor que la cantidad de muestras disponibles de este producto (%s)' % (product_uom_qty, line_product.remaining_samples))\n"
+"                    }\n"
+"            else:\n"
+"                res['warning'] = {\n"
+"                    'title': _('No existen muestras disponibles actualmente"
+
+#. module: eg_product_samples
+#: model:ir.model,name:eg_product_samples.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+

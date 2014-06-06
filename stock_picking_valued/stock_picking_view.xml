@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+        <record id="view_picking_out_form_add_fields_valued_picking" model="ir.ui.view">
+            <field name="name">stock.picking.out.form.add.fields.valued.picking</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="backorder_id" position="after">
+                    <field name="valued_picking"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_picking_in_tree_add_amount_total" model="ir.ui.view">
+            <field name="name">stock.picking.in.tree.add.amount_total</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_in_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="min_date" position="before">
+                    <field name="amount_total"/>
+                </field>
+                <field name="state" position="before">
+                    <field name="amount_untaxed"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_picking_out_tree_add_amounts" model="ir.ui.view">
+            <field name="name">stock.picking.out.tree.add_amounts</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_out_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="min_date" position="before">
+                    <field name="amount_total"/>
+                </field>
+                <field name="state" position="before">
+                    <field name="amount_untaxed"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_picking_in_form_add_valued_fields" model="ir.ui.view">
+            <field name="name">stock.picking.in.form.add_valued_fields</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="move_lines" position="after">
+                    <field name="amount_untaxed"/>
+                    <field name="amount_tax"/>
+                    <field name="amount_total"/>
+                </field>
+                <xpath expr="/form/notebook/page[@string='General Information']/field[@name='move_lines']/tree/field[@name='state']" position="before">
+                    <field name="price_unit" readonly="1"/>
+                    <field name="price_subtotal"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_picking_out_form_add_amounts" model="ir.ui.view">
+            <field name="name">stock.picking.out.form.add_amounts</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="move_lines" position="after">
+                    <field name="amount_untaxed"/>
+                    <field name="amount_tax"/>
+                    <field name="amount_total"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_move_picking_outcoming_tree_add_subtotal" model="ir.ui.view">
+            <field name="name">view.move.picking.outcoming.tree.add_subtotal</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_tree_reception_picking"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="product_uom" position="before">
+                    <field name="order_price_unit"/>
+                    <field name="price_subtotal"/>
+                </field>
+            </field>
+       </record>
+        
+    </data>
+</openerp>

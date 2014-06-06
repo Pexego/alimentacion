@@ -1,0 +1,135 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* stock_valued_date
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-12 18:34+0000\n"
+"PO-Revision-Date: 2012-11-12 19:37+0100\n"
+"Last-Translator: Marta <marta@pexego.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: stock_valued_date
+#: field:weighted.average.price,stock_qty:0
+msgid "Stock qty."
+msgstr ""
+
+#. module: stock_valued_date
+#: field:weighted.average.price,move_id:0
+msgid "Stock move"
+msgstr ""
+
+#. module: stock_valued_date
+#: help:mrp.production,real_date:0
+#: help:stock.picking,real_date:0
+msgid "Real Date of Completion"
+msgstr ""
+
+#. module: stock_valued_date
+#: model:ir.model,name:stock_valued_date.model_mrp_production
+msgid "Manufacturing Order"
+msgstr ""
+
+#. module: stock_valued_date
+#: constraint:stock.move:0
+msgid "You must assign a production lot for this product"
+msgstr ""
+
+#. module: stock_valued_date
+#: model:ir.model,name:stock_valued_date.model_stock_picking
+msgid "Picking List"
+msgstr ""
+
+#. module: stock_valued_date
+#: view:weighted.average.price:0
+#: field:weighted.average.price,product_id:0
+msgid "Product"
+msgstr ""
+
+#. module: stock_valued_date
+#: model:ir.actions.act_window,name:stock_valued_date.weighted_average_price_action
+#: model:ir.ui.menu,name:stock_valued_date.weighted_average_price_menu
+#: model:ir.ui.menu,name:stock_valued_date.weighted_average_price_menu_parent
+#: field:weighted.average.price,pmp:0
+msgid "PMP"
+msgstr ""
+
+#. module: stock_valued_date
+#: constraint:stock.move:0
+msgid "You try to assign a lot which is not from the same product"
+msgstr ""
+
+#. module: stock_valued_date
+#: constraint:stock.move:0
+msgid "You can not move products from or to a location of the type view."
+msgstr ""
+
+#. module: stock_valued_date
+#: field:weighted.average.price,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: stock_valued_date
+#: field:mrp.production,real_date:0
+#: field:stock.picking,real_date:0
+msgid "Real Date"
+msgstr ""
+
+#. module: stock_valued_date
+#: view:weighted.average.price:0
+#: field:weighted.average.price,date:0
+msgid "Date"
+msgstr ""
+
+#. module: stock_valued_date
+#: constraint:mrp.production:0
+msgid "Order quantity cannot be negative or zero!"
+msgstr ""
+
+#. module: stock_valued_date
+#: field:weighted.average.price,name:0
+msgid "Name"
+msgstr ""
+
+#. module: stock_valued_date
+#: view:weighted.average.price:0
+msgid "Weighted average price"
+msgstr ""
+
+#. module: stock_valued_date
+#: field:stock.move,production_ids:0
+msgid "Consumed Products"
+msgstr ""
+
+#. module: stock_valued_date
+#: sql_constraint:mrp.production:0
+#: sql_constraint:stock.picking:0
+msgid "Reference must be unique per Company!"
+msgstr ""
+
+#. module: stock_valued_date
+#: model:ir.model,name:stock_valued_date.model_weighted_average_price
+msgid "Records, for each product, the PMP and the stock in a date."
+msgstr ""
+
+#. module: stock_valued_date
+#: view:weighted.average.price:0
+msgid "Group by ..."
+msgstr ""
+
+#. module: stock_valued_date
+#: model:ir.model,name:stock_valued_date.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: stock_valued_date
+#: field:stock.move,inventory_ids:0
+msgid "Inventories"
+msgstr ""
+

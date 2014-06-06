@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+        <menuitem id="product_cost_management" parent="account.menu_analytic_accounting" name="Product Costs"/>
+        <menuitem id="product_costs_management_cost_type" parent="product_cost_management" action="action_cost_types"/>
+        <menuitem id="product_costs_management_structure" parent="product_cost_management" action="action_cost_structure"/>
+    </data>
+</openerp>

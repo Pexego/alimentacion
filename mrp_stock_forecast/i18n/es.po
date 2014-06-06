@@ -1,0 +1,402 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mrp_stock_forecast
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-31 11:49+0000\n"
+"PO-Revision-Date: 2013-07-31 14:33+0100\n"
+"Last-Translator: marta <marta@pexego.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,mar_kg:0
+msgid "Mar Kg"
+msgstr "Mar Kg"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,jan_hours:0
+msgid "Jan Hrs"
+msgstr "Ene Hrs"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "June"
+msgstr "Junio"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "February"
+msgstr "Febrero"
+
+#. module: mrp_stock_forecast
+#: view:mrp.forecast:0
+msgid "Search MRP Forecast"
+msgstr "Buscar Prev. de Producción"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+msgid "Forecasts Kg Sold"
+msgstr "Previsiones de Kg movidos"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+msgid "Analytic account"
+msgstr "Cuenta Analítica"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,feb_hours:0
+msgid "Feb Hrs"
+msgstr "Feb Hrs"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "October"
+msgstr "Octubre"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,oct_real_time:0
+msgid "Oct Real Time"
+msgstr "Oct. Tmp. Real"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: model:ir.actions.act_window,name:mrp_stock_forecast.action_view_forecast_kg_sold_form
+msgid "Forecast Kg Sold"
+msgstr "Previsión de kg movidos"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,may_kg:0
+msgid "May Kg"
+msgstr "May Kg"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,jul_real_time:0
+msgid "Jul Real Time"
+msgstr "Jul Tmp Real"
+
+#. module: mrp_stock_forecast
+#: model:ir.model,name:mrp_stock_forecast.model_forecast_kg_sold_line
+msgid "forecast.kg.sold.line"
+msgstr "Líneas prev. kg. movidos"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,feb_kg:0
+msgid "Feb Kg"
+msgstr "Feb Kg"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,jun_kg:0
+msgid "Jun Kg"
+msgstr "Jun Kg"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "March"
+msgstr "Marzo"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,aug_real_time:0
+msgid "Aug Real Time"
+msgstr "Ago. Tmp Real"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "May"
+msgstr "May"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,jun_hours:0
+msgid "Jun Hrs"
+msgstr "Jun Hrs"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: field:forecast.kg.sold,company_id:0
+#: view:mrp.forecast:0
+#: field:mrp.forecast,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: field:forecast.kg.sold,commercial_id:0
+msgid "Commercial"
+msgstr "Comercial"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,jun_real_time:0
+msgid "Jun Real Time"
+msgstr "Jun Tmp Real"
+
+#. module: mrp_stock_forecast
+#: model:ir.model,name:mrp_stock_forecast.model_forecast_kg_sold
+msgid "Forecast of kg moved"
+msgstr "Previsión Kg Movidos"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,jan_real_time:0
+msgid "Jan Real Time"
+msgstr "Jun Tmp Real"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,aug_kg:0
+msgid "Aug Kg"
+msgstr "Ago Kg"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+msgid "Search Forecast kg sold"
+msgstr "Buscar Prev. Kg. Movidos"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,may_hours:0
+msgid "May Hrs"
+msgstr "May Hrs"
+
+#. module: mrp_stock_forecast
+#: model:ir.actions.act_window,name:mrp_stock_forecast.action_view_mrp_forecast_form
+#: model:ir.ui.menu,name:mrp_stock_forecast.menu_mrp_forecast
+#: model:ir.ui.menu,name:mrp_stock_forecast.menu_mrp_forecast_all
+#: view:mrp.forecast:0
+#: field:mrp.forecast.line,mrp_forecast_id:0
+msgid "MRP Forecast"
+msgstr "Previsión de Horas"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold,date:0
+#: field:mrp.forecast,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,nov_hours:0
+msgid "Nov Hrs"
+msgstr "Nov Hrs"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "July"
+msgstr "Julio"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,jul_hours:0
+msgid "Jul Hrs"
+msgstr "Jul Hrs"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,notes:0
+msgid "Notes"
+msgstr "Notas"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,dec_kg:0
+msgid "Dec Kg"
+msgstr "Dic Kg"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold,analytic_id:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,aug_hours:0
+msgid "Aug Hrs"
+msgstr "Ago Hrs"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold,name:0
+#: field:forecast.kg.sold.line,name:0
+#: field:mrp.forecast,name:0
+#: field:mrp.forecast.line,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+msgid "My purchases Forecast"
+msgstr "My purchases Forecast"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "January"
+msgstr "Enero"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,mar_hours:0
+msgid "Mar Hrs"
+msgstr "Mar Hrs"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: field:forecast.kg.sold,kgsold_forecast_lines:0
+#: view:mrp.forecast:0
+#: field:mrp.forecast,mrp_forecast_lines:0
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,oct_kg:0
+msgid "Oct Kg"
+msgstr "Oct Kg"
+
+#. module: mrp_stock_forecast
+#: model:ir.ui.menu,name:mrp_stock_forecast.menu_forecast_kg_sold_all
+msgid "Forecasts kg sold"
+msgstr "Previsiones kg movidos"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "April"
+msgstr "Abril"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,dec_hours:0
+msgid "Dec Hrs"
+msgstr "Dic Hrs"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,workcenter_id:0
+msgid "Workcenter"
+msgstr "Centro de Producción"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,sep_hours:0
+msgid "Sep Hrs"
+msgstr "Sep Hrs"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,kgsold_forecast_id:0
+#: model:ir.ui.menu,name:mrp_stock_forecast.menu_kg_sold
+msgid "Forecast kg sold"
+msgstr "Prev. kg movidos"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,apr_kg:0
+msgid "Apr Kg"
+msgstr "Abr Kg"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,jul_kg:0
+msgid "Jul Kg"
+msgstr "Jul Kg"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "November"
+msgstr "Noviembre"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,nov_kg:0
+msgid "Nov Kg"
+msgstr "Nov Kg"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,jan_kg:0
+msgid "Jan Kg"
+msgstr "Ene Kg"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,nov_real_time:0
+msgid "Nov Real Time"
+msgstr "Nov Tmp Real"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,feb_real_time:0
+msgid "Feb Real Time"
+msgstr "Feb Tmp Real"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "Group By..."
+msgstr "Group By..."
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,may_real_time:0
+msgid "May Real Time"
+msgstr "May Real Time"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,apr_real_time:0
+msgid "Apr Real Time"
+msgstr "Apr Real Time"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,sep_kg:0
+msgid "Sep Kg"
+msgstr "Sep Kg"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,apr_hours:0
+msgid "Apr Hrs"
+msgstr "Apr Hrs"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,sep_real_time:0
+msgid "Sep Real Time"
+msgstr "Sep Real Time"
+
+#. module: mrp_stock_forecast
+#: model:ir.model,name:mrp_stock_forecast.model_mrp_forecast_line
+msgid "mrp.forecast.line"
+msgstr "mrp.forecast.line"
+
+#. module: mrp_stock_forecast
+#: field:forecast.kg.sold.line,format_id:0
+msgid "Product Format"
+msgstr "Product Format"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "September"
+msgstr "September"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,dec_real_time:0
+msgid "Dec Real Time"
+msgstr "Dec Real Time"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,oct_hours:0
+msgid "Oct Hrs"
+msgstr "Oct Hrs"
+
+#. module: mrp_stock_forecast
+#: view:forecast.kg.sold:0
+#: view:mrp.forecast:0
+msgid "December"
+msgstr "December"
+
+#. module: mrp_stock_forecast
+#: field:mrp.forecast.line,mar_real_time:0
+msgid "Mar Real Time"
+msgstr "Mar Real Time"
+
+#. module: mrp_stock_forecast
+#: model:ir.model,name:mrp_stock_forecast.model_mrp_forecast
+msgid "Forecast of producion hours"
+msgstr "Forecast of producion hours"
+

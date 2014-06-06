@@ -1,0 +1,25 @@
+=== modified file 'tr_barcode_config/barcode/barcode_osv.py'
+--- tr_barcode_config/barcode/barcode_osv.py	2012-11-02 10:10:56 +0000
++++ tr_barcode_config/barcode/barcode_osv.py	2012-11-20 11:10:46 +0000
+@@ -84,9 +84,10 @@
+             if not barcode_vals.get('code', False):
+                 read_value = pool.get(model).read(cr, uid, id)
+                 barcode_vals['code'] = read_value.get(barcode_config.field.name, False)
+-            barcode_obj = pool.get('tr.barcode')
+-            barcode_id = barcode_obj.create(cr, uid, barcode_vals, context)
+-            barcode_obj.generate_image(cr, uid, [barcode_id], context)
++            if barcode_vals['code']:
++                barcode_obj = pool.get('tr.barcode')
++                barcode_id = barcode_obj.create(cr, uid, barcode_vals, context)
++                barcode_obj.generate_image(cr, uid, [barcode_id], context)
+     else:
+         write_barcode(cr, uid, [barcode_id], vals, model, context)
+     return barcode_id
+@@ -125,4 +126,4 @@
+                 write_barcode(cr, uid, [obj.x_barcode_id.id], vals, self._name, context)
+         return super(osv.osv, self).write(cr, uid, ids, vals, context)
+ 
+-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+\ No newline at end of file
++# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+

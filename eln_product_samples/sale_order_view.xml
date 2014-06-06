@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--AÑADIMOS EL CAMPO 'MUESTRA?' A LA VISTA FORMULARIO DE LAS LINEAS DE LAS ORDENES DE VENTA-->
+        <record id="view_add_sample_field_sale_line_form" model="ir.ui.view">
+            <field name="name">view.add.sameple.field.sale.line.form</field>
+            <field name="model">sale.order.line</field>
+            <field name="inherit_id" ref="sale.view_order_line_form2"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="invoiced" position="before">
+                    <field name="sample_ok" on_change="onchange_sample_ok(sample_ok, product_uom_qty, product_id, price_unit)" attrs="{'readonly':[('product_id', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+
+        <!--AÑADIMOS EL CAMPO 'MUESTRA?' A LA VISTA EN FORMULARIO DE LAS LINEAS DE LAS ORDENES DE VENTA DESDE EL PEDIDO DE VENTA-->
+        <record id="view_add_sample_field_sale_order_sale_line_form" model="ir.ui.view">
+            <field name="name">view.add.sample.field.sale.order.sale.line.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/notebook/page[@string='Sales Order']/field[@name='order_line']/form/notebook/page[@string='Order Line']/group/field[@name='name']" position="after">
+                    <field name="sample_ok" attrs="{'readonly':[('product_id', '=', False)]}" on_change="onchange_sample_ok(sample_ok, product_uom_qty, product_id, price_unit)"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--AÑADIMOS EL CAMPO DE LITROS VENDIDOS A LA VISTA EN ARBOL DE LINEAS DE VENTA DENTRO DE LA VISTA EN FORMULARIO DEL PEDIDO DE VENTA-->
+        <record id="view_add_sample_field_sale_line_tree_sale_form" model="ir.ui.view">
+            <field name="name">view.add.sample.field.sale.line.tree.sale.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/notebook/page[@string='Sales Order']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='name']" position="after">
+                    <field name="sample_ok"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

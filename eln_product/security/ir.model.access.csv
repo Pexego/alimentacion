@@ -1,0 +1,27 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_ingredient_employee,product.ingredient employee,model_product_ingredient,base.group_user,1,0,0,0
+access_product_ingredient_sale_manager,product.ingredient salemanager,model_product_ingredient,base.group_sale_manager,1,1,1,1
+
+access_product_parameter_employee,product.parameter employee,model_product_parameter,base.group_user,1,0,0,0
+access_product_parameter_sale_manager,product.parameter salemanager,model_product_parameter,base.group_sale_manager,1,1,1,1
+
+access_product_parameter_product_employee,product.parameter.product employee,model_product_parameter_product,base.group_user,1,0,0,0
+access_product_parameter_product_sale_manager,product.parameter.product salemanager,model_product_parameter_product,base.group_sale_manager,1,1,1,1
+
+access_product_revision_employee,product.revision employee,model_product_revision,base.group_user,1,0,0,0
+access_product_revision_sale_manager,product.revision salemanager,model_product_revision,base.group_sale_manager,1,1,1,1
+
+access_product_sheet_shipments_employee,product.sheet.shipments employee,model_product_sheet_shipments,base.group_user,1,0,0,0
+access_product_sheet_shipments_sale_manager,product.sheet.shipments salemanager,model_product_sheet_shipments,base.group_sale_manager,1,1,1,1
+
+access_product_options_employee,product.options employee,model_product_options,base.group_user,1,0,0,0
+access_product_optinos_sale_manager,product.options salemanager,model_product_options,base.group_sale_manager,1,1,1,1
+
+access_product_options_product_employee,product.options.product employee,model_product_options_product,base.group_user,1,0,0,0
+access_product_options_product_sale_manager,product.options.product salemanager,model_product_options_product,base.group_sale_manager,1,1,1,1
+
+access_product_verifications_employee,product.verifications employee,model_product_verifications,base.group_user,1,0,0,0
+access_product_verifications_sale_manager,product.verifications salemanager,model_product_verifications,base.group_sale_manager,1,1,1,1
+
+access_product_verifications_product_employee,product.verifications.product employee,model_product_verifications_product,base.group_user,1,0,0,0
+access_product_verifications_product_sale_manager,product.verifications.product salemanager,model_product_verifications_product,base.group_sale_manager,1,1,1,1

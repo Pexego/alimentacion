@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+        <record id="purchase_order_tree_add_product_names" model="ir.ui.view">
+            <field name="name">purchase.order.tree.add.product.names</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="lines_product_name_str"/>
+                </field>
+
+            </field>
+        </record>
+    </data>
+</openerp>
