@@ -77,9 +77,11 @@ class mrp_production(osv.osv):
         self.pool.get('stock.move').unlink(cr, uid, to_delete_moves)
 
         picking_obj = self.pool.get('stock.picking').browse(cr, uid, picking_id)
+        wf_service = netsvc.LocalService("workflow")
         if not picking_obj.move_lines:
-            wf_service = netsvc.LocalService("workflow")
             wf_service.trg_write(uid, 'stock.picking', picking_obj.id, cr)
+        else:
+            wf_service.trg_validate(uid, 'stock.picking', picking_obj.id, 'button_confirm', cr)
 
         return picking_id
 
