@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="stock_move_tree" model="ir.ui.view">
+            <field name="name">Stock Moves</field>
+            <field name="model">stock.move</field>
+            <field name="type">tree</field>
+            <field name="field_parent">child_ids</field>
+            <field name="arch" type="xml">
+                <tree colors="grey:state == 'cancel'" string="Moves">
+                    <field name="product_id" />
+                    <field name="product_qty" />
+                    <field name="product_uom"  string="UOM"/>
+                    <field name="partner_id"/>
+                    <field name="picking_id"/>
+                    <field name="location_id" />
+                    <field name="location_dest_id" />
+                    <field name="move_type"/>
+                    <field name="date" string="Date"/>
+                    <field name="date_expected" string="Date Expected"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_move_tree2" model="ir.ui.view">
+            <field name="name">Stock Moves</field>
+            <field name="model">stock.move</field>
+            <field name="type">tree</field>
+            <field name="field_parent">parent_ids</field>
+            <field name="arch" type="xml">
+                <tree colors="grey:state == 'cancel'" string="Moves">
+                    <field name="product_id" />
+                    <field name="product_qty" />
+                    <field name="product_uom"  string="UOM"/>
+                    <field name="partner_id"/>
+                    <field name="picking_id"/>
+                    <field name="location_id" />
+                    <field name="location_dest_id" />
+                    <field name="move_type"/>
+                    <field name="date" string="Date"/>
+                     <field name="date_expected" string="Date Expected"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_move_tree3" model="ir.ui.view">
+            <field name="name">Stock Moves</field>
+            <field name="model">stock.move</field>
+            <field name="type">tree</field>
+            <field name="field_parent">simplified_child_ids</field>
+            <field name="arch" type="xml">
+                <tree colors="grey:state == 'cancel'" string="Moves">
+                    <field name="product_id" />
+                    <field name="product_qty" />
+                    <field name="product_uom"  string="UOM"/>
+                    <field name="partner_id"/>
+                    <field name="picking_id"/>
+                    <field name="location_id" />
+                    <field name="location_dest_id" />
+                    <field name="move_type"/>
+                    <field name="date" string="Date"/>
+                     <field name="date_expected" string="Date Expected"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_move_tree4" model="ir.ui.view">
+            <field name="name">Stock Moves</field>
+            <field name="model">stock.move</field>
+            <field name="type">tree</field>
+            <field name="field_parent">simplified_parent_ids</field>
+            <field name="arch" type="xml">
+                <tree colors="grey:state == 'cancel'" string="Moves">
+                    <field name="product_id" />
+                    <field name="product_qty" />
+                    <field name="product_uom"  string="UOM"/>
+                    <field name="partner_id"/>
+                    <field name="picking_id"/>
+                    <field name="location_id" />
+                    <field name="location_dest_id" />
+                    <field name="move_type"/>
+                    <field name="date" string="Date"/>
+                     <field name="date_expected" string="Date Expected"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_production_lot_form_add_traceability" model="ir.ui.view">
+            <field name="name">stock.production.lot.form_add_traceability</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <button name="action_traceability" position="replace">
+                    <button name="action_traceability" class="oe_stat_button" string="History" type="object" attrs="{'invisible': [('quant_ids','=',[])]}"/>
+                    <button name="action_tree_traceability" string="Up trace" type="object" icon="fa-arrow-up" class="oe_stat_button" attrs="{'invisible': [('quant_ids','=',[])]}"/>
+                    <button name="action_tree_traceability" string="Down trace" type="object" context="{'type': 'child_ids'}" icon="fa-arrow-down" class="oe_stat_button" attrs="{'invisible': [('quant_ids','=',[])]}"/>
+                    <button name="action_simplified_tree_traceability" string="Simple up trace" type="object" icon="fa-arrow-up" class="oe_stat_button" attrs="{'invisible': [('quant_ids','=',[])]}"/>
+                    <button name="action_simplified_tree_traceability" string="Simple down trace" type="object" context="{'type': 'simplified_child_ids'}" icon="fa-arrow-down" class="oe_stat_button" attrs="{'invisible': [('quant_ids','=',[])]}"/>
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>
