@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * mrp_automatic_lot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0rc1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-10 15:38+0000\n"
+"PO-Revision-Date: 2014-09-10 15:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_automatic_lot
+#: field:mrp.production,final_lot_id:0
+msgid "Final Lot"
+msgstr "Lote Final"
+
+#. module: mrp_automatic_lot
+#: view:mrp.production:mrp_automatic_lot.mrp_production_form_view_add_final_lot
+msgid "Finished Products"
+msgstr "Productos finalizados"
+
+#. module: mrp_automatic_lot
+#: model:ir.model,name:mrp_automatic_lot.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Órden de producción"
+
+#. module: mrp_automatic_lot
+#: model:ir.model,name:mrp_automatic_lot.model_mrp_product_produce
+msgid "Product Produce"
+msgstr "Fabricar producto"
+
+#. module: mrp_automatic_lot
+#: field:mrp.product.produce,with_final_lot:0
+msgid "With final lot"
+msgstr "Con lote final"
+

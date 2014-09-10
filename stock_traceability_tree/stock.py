@@ -34,10 +34,12 @@ class StockMove(models.Model):
         for move in self.browse(cr, uid, ids, context=context):
             if move.picking_id and move.picking_id.\
                     picking_type_code != "internal":
-                if move.picking_id.picking_type_code == 'incoming':
-                    res[move.id] = _('IN')
-                elif move.picking_id.name and 'return' in move.picking_id.name:
+                if move.location_id.usage == 'customer':
                     res[move.id] = _('RETURN')
+                elif move.location_dest_id.usage == 'supplier':
+                    res[move.id] = _('RETURN')
+                elif move.picking_id.picking_type_code == 'incoming':
+                    res[move.id] = _('IN')
                 elif move.picking_id.picking_type_code == 'outgoing':
                     res[move.id] = _('OUT')
                 else:
