@@ -28,9 +28,18 @@ class mrp_production(osv.osv):
         res= super(mrp_production,self).action_confirm(cr, uid, ids, context=context)
         stock_mov_obj = self.pool.get('stock.move')
         production = self.browse(cr, uid, ids[0], context=context)
-        for produce_product in production.move_created_ids:
-            prod_lot_id = stock_mov_obj._create_lot(cr, uid, [produce_product.id], produce_product.product_id.id, prefix=False)
-            produce_product.write({'prodlot_id': prod_lot_id})
+        if not production.product_id.transfer_lot:
+            for produce_product in production.move_created_ids:
+                prod_lot_id = stock_mov_obj._create_lot(cr, uid, [produce_product.id], produce_product.product_id.id, prefix=False)
+                produce_product.write({'prodlot_id': prod_lot_id})
+        else:
+            for consume_product in production.move_lines:
+                if consume_product.prodlot_id:
+                    lot_obj = self.pool.get('stock.production.lot')
+                    prod_lot_id = lot_obj.copy(cr, uid, consume_product.prodlot_id.id)
+
+            for produce_product in production.move_created_ids:
+                produce_product.write({'prodlot_id': prod_lot_id})
 
         return res
 

@@ -33,7 +33,7 @@
     "category" : "Production",
     "init_xml" : [],
     "update_xml" : [
-        
+        'product_view.xml',
     ],
     'demo_xml': [],
     'installable': True,
