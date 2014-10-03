@@ -36,7 +36,7 @@ class mrp_production(osv.osv):
             for consume_product in production.move_lines:
                 if consume_product.prodlot_id:
                     lot_obj = self.pool.get('stock.production.lot')
-                    prod_lot_id = lot_obj.copy(cr, uid, consume_product.prodlot_id.id)
+                    prod_lot_id = lot_obj.copy(cr, uid, consume_product.prodlot_id.id, {'product_id': production.product_id.id})
 
             for produce_product in production.move_created_ids:
                 produce_product.write({'prodlot_id': prod_lot_id})
