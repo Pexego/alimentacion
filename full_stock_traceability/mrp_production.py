@@ -31,10 +31,10 @@ class mrp_production(osv.osv):
         """extends this method for managing no_procurement_moves"""
         if context is None: context = {}
         picking_id = super(mrp_production, self).action_confirm(cr, uid, ids, context=context)
-        
+
         to_delete_moves = []
         procurements_to_delete = []
-        
+
         picking_obj = self.pool.get('stock.picking').browse(cr, uid, picking_id)
 
         for move in picking_obj.move_lines:
@@ -43,7 +43,7 @@ class mrp_production(osv.osv):
                 procurements = self.pool.get('procurement.order').search(cr, uid, [('move_id', '=', move.id)])
                 if procurements:
                     procurements_to_delete.extend(procurements)
-                    
+
                 if move.move_dest_id:
                     self.pool.get('stock.move').write(cr, uid, [move.move_dest_id.id], {'location_id': move.product_id.product_tmpl_id.property_raw.id})
                     if move.move_dest_id.product_id.miscible:
@@ -84,5 +84,23 @@ class mrp_production(osv.osv):
             wf_service.trg_validate(uid, 'stock.picking', picking_obj.id, 'button_confirm', cr)
 
         return picking_id
+
+    def action_produce(self, cr, uid, production_id, production_qty, production_mode, context=None):
+        res = super(mrp_production, self).action_produce(cr, uid, production_id, production_qty, production_mode, context=context)
+
+        production = self.browse(cr, uid, production_id, context=context)
+        if production_mode == 'consume_produce':
+            child_ids = [x.id for x in production.move_lines2 if x.location_dest_id.usage == "production"]
+            for move in production.move_created_ids2:
+                if not move.move_history_ids2:
+                    move.write({'move_history_ids2': [(6, 0, child_ids)]})
+                else:
+                    to_remove_moves = []
+                    for parent_move in move.move_history_ids2:
+                        if parent_move.location_dest_id.usage != "production":
+                            to_remove_moves.append(parent_move.id)
+                    if to_remove_moves:
+                        move.write({'move_history_ids2': [(2, to_remove_moves)]})
+        return res
 
 mrp_production()
