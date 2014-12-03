@@ -27,6 +27,7 @@
     "depends" : [
         "base",
         "mrp",
+        "mrp_byproduct",
         "product_lot_sequence",
         "stock"
     ],
