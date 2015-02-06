@@ -31,7 +31,10 @@ class product_product(osv.osv):
 
     _columns = {
                 'transfer_lot': fields.boolean('Transfer Lot', help="When confirm production order, will copy the lot of the first product to the one to be produced"),
+                'transfer_lot_date': fields.boolean('Tranfiere fecha de lote',
+                                                    help="Al confirmar una orden de producción de este producto se transferirá la fecha de caducidad del primer lote a consumir encontrado"),
                 }
     _defaults = {
                  'transfer_lot': lambda *a: 0,
+                 'transfer_lot_date': lambda *a: 0,
                  }

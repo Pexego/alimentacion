@@ -9,6 +9,7 @@
             <field name="arch" type="xml">
                 <field name="type" position="before">
                     <field name="transfer_lot"/>
+                    <field name="transfer_lot_date"/>
                 </field>
             </field>
     	</record>

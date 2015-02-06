@@ -31,15 +31,27 @@ class mrp_production(osv.osv):
         if not production.product_id.transfer_lot:
             for produce_product in production.move_created_ids:
                 prod_lot_id = stock_mov_obj._create_lot(cr, uid, [produce_product.id], produce_product.product_id.id, prefix=False)
+                if production.product_id.transfer_lot_date:
+                    lot_obj = self.pool.get('stock.production.lot')
+                    lot = None
+                    for consume_product in production.move_lines:
+                        if consume_product.prodlot_id:
+                            lot = consume_product.prodlot_id
+                        values = {
+                            'life_date': lot.life_date,
+                            'use_date': lot.use_date,
+                        }
+                    lot_obj.write (cr, uid, prod_lot_id, values, context)
                 produce_product.write({'prodlot_id': prod_lot_id})
         else:
+            prod_lot_id = None
             for consume_product in production.move_lines:
                 if consume_product.prodlot_id:
                     lot_obj = self.pool.get('stock.production.lot')
                     prod_lot_id = lot_obj.copy(cr, uid, consume_product.prodlot_id.id, {'product_id': production.product_id.id})
-
-            for produce_product in production.move_created_ids:
-                produce_product.write({'prodlot_id': prod_lot_id})
+            if prod_lot_id:
+                for produce_product in production.move_created_ids:
+                    produce_product.write({'prodlot_id': prod_lot_id})
 
         return res
 
