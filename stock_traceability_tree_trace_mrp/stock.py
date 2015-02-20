@@ -39,5 +39,8 @@ class StockQuant(models.Model):
         if move.production_id:  # Is final production move
             for raw in move.production_id.move_lines:
                 move.write({'parent_ids': [(4, raw.id)]})
+            for raw in move.production_id.move_lines2:
+                if raw.state != "cancel" and not raw.scrapped:
+                    move.write({'parent_ids': [(4, raw.id)]})
 
         return res
