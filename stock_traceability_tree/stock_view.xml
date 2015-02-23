@@ -12,6 +12,7 @@
                     <field name="product_id" />
                     <field name="product_qty" />
                     <field name="product_uom"  string="UOM"/>
+                    <field name="lot_str"/>
                     <field name="partner_id"/>
                     <field name="picking_id"/>
                     <field name="location_id" />
@@ -34,6 +35,7 @@
                     <field name="product_id" />
                     <field name="product_qty" />
                     <field name="product_uom"  string="UOM"/>
+                    <field name="lot_str"/>
                     <field name="partner_id"/>
                     <field name="picking_id"/>
                     <field name="location_id" />
@@ -56,6 +58,7 @@
                     <field name="product_id" />
                     <field name="product_qty" />
                     <field name="product_uom"  string="UOM"/>
+                    <field name="lot_str"/>
                     <field name="partner_id"/>
                     <field name="picking_id"/>
                     <field name="location_id" />
@@ -78,6 +81,7 @@
                     <field name="product_id" />
                     <field name="product_qty" />
                     <field name="product_uom"  string="UOM"/>
+                    <field name="lot_str"/>
                     <field name="partner_id"/>
                     <field name="picking_id"/>
                     <field name="location_id" />
@@ -89,6 +93,14 @@
                 </tree>
             </field>
         </record>
+
+        <act_window
+            id="action_open_lots from moves"
+            name="Related lots"
+            domain="[('move_related_ids','in',[active_id])]"
+            res_model="stock.production.lot"
+            src_model="stock.move"
+            key2="tree_but_open"/>
 
         <record id="view_production_lot_form_add_traceability" model="ir.ui.view">
             <field name="name">stock.production.lot.form_add_traceability</field>

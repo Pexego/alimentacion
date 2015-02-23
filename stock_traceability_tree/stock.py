@@ -94,6 +94,14 @@ class StockMove(models.Model):
                 res[move.id] = records
         return res
 
+    def _get_related_lots_str(self, cr, uid, ids, field_name, arg, context):
+        res = {}
+        for move in self.browse(cr, uid, ids):
+            res[move.id] = u", ".join([x.name for x in move.lot_ids])
+
+        return res
+
+
     _columns = {
         'child_ids': fields.many2many('stock.move', 'stock_move_trace_rel',
                                       'parent_id', 'child_id', 'Child moves'),
@@ -113,6 +121,9 @@ class StockMove(models.Model):
                                                 relation='stock.move',
                                                 type="many2many",
                                                 string='Last childs'),
+        'lot_str': fields.function(_get_related_lots_str, method=True,
+                                   type="char", string="Lots",
+                                   readonly=True)
     }
 
 
@@ -144,6 +155,11 @@ class StockQuant(models.Model):
         super(StockQuant, self)._quants_merge(cr, uid, solved_quant_ids,
                                               solving_quant, context=context)
 
+    _columns = {
+        'move_ids': fields.many2many('stock.move', 'stock_quant_move_rel',
+                                     'quant_id', 'move_id', 'Moved Quants'),
+    }
+
 
 class StockProductionLot(models.Model):
 
@@ -174,3 +190,48 @@ class StockProductionLot(models.Model):
         value = self.pool.get('action.simplified.traceability').\
             action_traceability(cr, uid, ids, context)
         return value
+
+    def _get_related_moves(self, cr, uid, ids, field_name, arg, context):
+        res = {}
+        for lot in self.browse(cr, uid, ids):
+            if lot.quant_ids:
+                moves = []
+                for quant in lot.quant_ids:
+                    for move in quat.move_ids:
+                        moves.append(move.id)
+
+                res[lot.id] = list(set(moves))
+            else:
+                res[lot.id] = []
+        return res
+
+    def _search_moves(self, cr, uid, obj, name, args, context=None):
+        if not len(args):
+            return []
+        move_pool = self.pool['stock.move']
+        final_lots = set()
+        for arg in args:
+            moves = []
+            lots = []
+            if arg[2]:
+                moves = move_pool.browse(cr, uid, arg[2])
+            for move in moves:
+                lots.extend([x.id for x in move.lot_ids])
+            lots = set(lots)
+            if lots and arg[1] in ["in", "="]:
+                final_lots |= lots
+            elif lots and arg[1] in ["not in", "!="]:
+                final_lots -= lots
+
+        if not final_lots:
+            return [('id', '=', 0)]
+        return [('id', 'in', list(final_lots))]
+
+    _columns = {
+        'move_related_ids': fields.function(_get_related_moves,
+                                            method=True,
+                                            relation='stock.move',
+                                            type="many2many",
+                                            string='Related moves',
+                                            fnct_search=_search_moves)
+    }
