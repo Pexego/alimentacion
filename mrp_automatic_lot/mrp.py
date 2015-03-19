@@ -41,7 +41,7 @@ class mrp_production(osv.osv):
                             'life_date': lot.life_date,
                             'use_date': lot.use_date,
                         }
-                    lot_obj.write (cr, uid, prod_lot_id, values, context)
+                    lot_obj.write(cr, uid, prod_lot_id, values, context)
                 produce_product.write({'prodlot_id': prod_lot_id})
         else:
             prod_lot_id = None
