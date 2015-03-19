@@ -119,7 +119,7 @@
                     <field name="name"/>
                     <field name="product_qty"/>
                     <field name="product_uom" string="UOM"/>
-                    <field name="prodlot_id" groups="base.group_extended"/>
+                    <field name="prodlot_id" />
                     <field name="expiry_date"/>
                     <field name="supplier"/>
                     <field groups="base.group_extended" name="tracking_id"/>
@@ -148,7 +148,7 @@
                     <field name="name"/>
                     <field name="product_qty"/>
                     <field name="product_uom" string="UOM"/>
-                    <field name="prodlot_id" groups="base.group_extended"/>
+                    <field name="prodlot_id" />
                     <field name="expiry_date"/>
                     <field name="supplier"/>
                     <field groups="base.group_extended" name="tracking_id"/>
@@ -178,7 +178,7 @@
                     <field name="name"/>
                     <field name="product_qty"/>
                     <field name="product_uom" string="UOM"/>
-                    <field name="prodlot_id" groups="base.group_extended"/>
+                    <field name="prodlot_id" />
                     <field name="expiry_date"/>
                     <field name="supplier"/>
                     <field groups="base.group_extended" name="tracking_id"/>
@@ -207,7 +207,7 @@
                     <field name="name"/>
                     <field name="product_qty"/>
                     <field name="product_uom" string="UOM"/>
-                    <field name="prodlot_id" groups="base.group_extended"/>
+                    <field name="prodlot_id" />
                     <field name="expiry_date"/>
                     <field name="supplier"/>
                     <field groups="base.group_extended" name="tracking_id"/>
