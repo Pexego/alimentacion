@@ -40,14 +40,14 @@ class stock_picking(osv.osv):
             }
 
             val = val1 = val2 = val3 = 0.0
-            cur = (picking.address_id and picking.address_id.partner_id.property_product_pricelist) and picking.address_id.partner_id.property_product_pricelist.currency_id or False
+            cur = (picking.partner_id and picking.partner_id.property_product_pricelist) and picking.partner_id.property_product_pricelist.currency_id or False
 
             for line in picking.move_lines:
                 price_unit = 0.0
                 if line.sale_line_id and line.state != 'cancel':
                     val1 += line.sale_line_id.price_subtotal
                     price_unit = line.sale_line_id.price_unit * (1-(line.sale_line_id.discount or 0.0)/100.0)
-                    for c in self.pool.get('account.tax').compute_all(cr, uid, line.sale_line_id.tax_id, price_unit, line.product_qty, line.sale_line_id.order_id.partner_order_id.id, line.sale_line_id.product_id.id, line.sale_line_id.order_partner_id)['taxes']:
+                    for c in self.pool.get('account.tax').compute_all(cr, uid, line.sale_line_id.tax_id, price_unit, line.product_qty, line.sale_line_id.order_id.partner_id.id, line.sale_line_id.product_id.id, line.sale_line_id.order_id.partner_id.id)['taxes']:
                         val += c.get('amount', 0.0)
                     val2 += (line.sale_line_id.price_unit * line.product_qty)
                     val3 += price_unit * line.product_qty
@@ -74,32 +74,56 @@ class stock_picking(osv.osv):
         return res
 
     _columns = {
-        'amount_untaxed': fields.function(_amount_all, method=True, digits_compute=dp.get_precision('Sale Price'), string='Untaxed Amount', multi='vp', readonly=True),
-        'amount_tax': fields.function(_amount_all, method=True, digits_compute=dp.get_precision('Sale Price'), string='Taxes', multi='vp', readonly=True),
-        'amount_total': fields.function(_amount_all, method=True, digits_compute=dp.get_precision('Sale Price'), string='Total', multi='vp', readonly=True),
-        'amount_gross': fields.function(_amount_all, method=True,digits_compute=dp.get_precision('Sale Price'), string='Amount gross', multi='vp', readonly=True),
-        'amount_discounted': fields.function(_amount_all, method=True, digits_compute=dp.get_precision('Sale Price'), string='Discounted', multi='vp', readonly=True),
-        'valued_picking': fields.boolean('Valued picking', help="If it sets to True, customer wants valued picking", readonly=True),
+        'amount_untaxed': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Untaxed Amount', multi='vp', readonly=True),
+        'amount_tax': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Taxes', multi='vp', readonly=True),
+        'amount_total': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Total', multi='vp', readonly=True),
+        'amount_gross': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Amount gross', multi='vp', readonly=True),
+        'amount_discounted': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Discounted', multi='vp', readonly=True),
+        'valued_picking': fields.related('partner_id', 'valued_picking', string='Valued picking', type="boolean", help="If it sets to True, customer wants valued picking", readonly=True),
     }
 
-    def onchange_partner_in(self, cr, uid, context=None, partner_id=None):
-        """extend this method to fill valued_picking field"""
-        res = super(stock_picking, self).onchange_partner_in(cr, uid, context=context, partner_id=partner_id)
-        if not 'value' in res:
-            res['value'] = {}
-        if partner_id:
-            address_obj = self.pool.get('res.partner.address').browse(cr, uid, partner_id)
-            if address_obj.partner_id:
-                res['value']['valued_picking'] = address_obj.partner_id.valued_picking
-        return res
-
-    
 stock_picking()
 
+class stock_picking_out(osv.osv):
+
+    _inherit = "stock.picking.out"
+
+    def _amount_all(self, cr, uid, ids, field_name, arg, context):
+        return self.pool.get('stock.picking')._amount_all(cr, uid, ids, field_name, arg, context=context)
+
+    _columns = {
+        'amount_untaxed': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Untaxed Amount', multi='vp', readonly=True),
+        'amount_tax': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Taxes', multi='vp', readonly=True),
+        'amount_total': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Total', multi='vp', readonly=True),
+        'amount_gross': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Amount gross', multi='vp', readonly=True),
+        'amount_discounted': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Discounted', multi='vp', readonly=True),
+        'valued_picking': fields.related('partner_id', 'valued_picking', string='Valued picking', type="boolean", help="If it sets to True, customer wants valued picking", readonly=True),
+    }
+
+stock_picking_out()
+
+class stock_picking_in(osv.osv):
+
+    _inherit = "stock.picking.in"
+
+    def _amount_all(self, cr, uid, ids, field_name, arg, context):
+        return self.pool.get('stock.picking')._amount_all(cr, uid, ids, field_name, arg, context=context)
+
+    _columns = {
+        'amount_untaxed': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Untaxed Amount', multi='vp', readonly=True),
+        'amount_tax': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Taxes', multi='vp', readonly=True),
+        'amount_total': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Total', multi='vp', readonly=True),
+        'amount_gross': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Amount gross', multi='vp', readonly=True),
+        'amount_discounted': fields.function(_amount_all, digits_compute=dp.get_precision('Sale Price'), string='Discounted', multi='vp', readonly=True),
+        'valued_picking': fields.related('partner_id', 'valued_picking', string='Valued picking', type="boolean", help="If it sets to True, customer wants valued picking", readonly=True),
+    }
+
+stock_picking_in()
+
 class stock_move(osv.osv):
-    
+
     _inherit = "stock.move"
-    
+
     def _get_subtotal(self, cr, uid, ids, field_name, arg, context):
         res = {}
         for move in self.browse(cr, uid, ids):
@@ -115,12 +139,12 @@ class stock_move(osv.osv):
                 price_unit = (move.purchase_line_id.price_unit * (1-(move.purchase_line_id.discount or 0.0)/100.0))
                 res[move.id]['price_subtotal'] = price_unit * move.product_qty
                 res[move.id]['order_price_unit'] = price_unit
-        
+
         return res
-    
+
     _columns = {
         'price_subtotal': fields.function(_get_subtotal, method=True, string="Subtotal", type="float", digits_compute=dp.get_precision('Sale Price'), readonly=True, multi="order_price"),
         'order_price_unit': fields.function(_get_subtotal, method=True, string="Price unit", type="float", digits_compute=dp.get_precision('Sale Price'), readonly=True, multi="order_price")
     }
-    
+
 stock_move()

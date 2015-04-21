@@ -27,10 +27,7 @@
     "category" : "Stock",
     "init_xml" : [],
     "update_xml" : [ "res_partner_view.xml",
-                    "stock_picking_view.xml",
-                   
-
-                    ],
+                    "stock_picking_view.xml",],
     'demo_xml': [],
     'installable': True,
     'active': False,
