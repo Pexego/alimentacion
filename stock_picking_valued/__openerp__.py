@@ -23,7 +23,7 @@
     "description" : """Module that adds fields that facilitate the use of stock picking valued.""",
     "version" : "1.0",
     "author" : "Pexego",
-    "depends" : ["base", "stock", "sale", "purchase", "purchase_discount"],
+    "depends" : ["base", "stock", "sale", "purchase"],
     "category" : "Stock",
     "init_xml" : [],
     "update_xml" : [ "res_partner_view.xml",

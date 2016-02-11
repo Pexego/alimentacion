@@ -2,16 +2,17 @@
 <openerp>
     <data>
 
-        <!--record id="mrp_production_form_view_remove_scrap_btn_in_consumed" model="ir.ui.view">
-            <field name="name">mrp.production.form.remove_scrap_btn_in_consumed</field>
+        <record id="mrp_production_form_ceck_availability" model="ir.ui.view">
+            <field name="name">mrp.production.check.availability</field>
             <field name="model">mrp.production</field>
-            <field name="inhe-rit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
             <field name="type">form</field>
             <field name="arch" type="xml">
-                <xpath expr="/form/notebook/page[@string='Consumed Products']/field[@name='move_lines2']/tree/button[@string='Scrap Products']" position="replace">
-                </xpath>
+                <button name="force_production" position="before" >
+                     <button name="check_availability" states="confirmed" string="Comprueba disponibilidad" type="object"/>
+                </button>
             </field>
-        </record-->
+        </record>
 
         <record id="mrp_production_form_view_editable_tree_view" model="ir.ui.view">
             <field name="name">mrp.production.form.editable_tree_view"</field>
