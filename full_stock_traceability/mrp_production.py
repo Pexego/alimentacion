@@ -66,7 +66,7 @@ class mrp_production(osv.osv):
                         vals['location_id'] = prodlot_location
 
                     self.pool.get('stock.move').write(cr, uid, [move.id], vals)
-                    if move.move_dest_id:
+                    if move.move_dest_id and default_prodlot:
                         self.pool.get('stock.move').write(cr, uid, [move.move_dest_id.id], {'prodlot_id': default_prodlot})
                         if move.move_dest_id.product_id.not_do_procurement and prodlot_location:
                             self.pool.get('stock.move').write(cr, uid, [move.move_dest_id.id], {'location_id': prodlot_location})
@@ -76,20 +76,22 @@ class mrp_production(osv.osv):
         self.pool.get('procurement.order').unlink(cr, uid, list(set(procurements_to_delete)))
         self.pool.get('stock.move').unlink(cr, uid, to_delete_moves)
 
-        picking_obj = self.pool.get('stock.picking').browse(cr, uid, picking_id)
+        #picking_obj = self.pool.get('stock.picking').browse(cr, uid,
+        # picking_id)
         wf_service = netsvc.LocalService("workflow")
         if not picking_obj.move_lines:
             wf_service.trg_write(uid, 'stock.picking', picking_obj.id, cr)
         else:
-            wf_service.trg_validate(uid, 'stock.picking', picking_obj.id, 'button_confirm', cr)
+            wf_service.trg_validate(uid, 'stock.picking', picking_obj.id,
+             'button_confirm', cr)
 
         return picking_id
 
     def check_availability(self, cr, uid, ids, context ):
         if context is None: context = {}
-        picking_id = super(mrp_production, self).action_confirm(cr, uid, ids, context=context)
-
-        picking = self.pool.get('stock.picking').browse(cr, uid, picking_id)
+        prod = self.browse(cr, uid, ids)[0]
+        picking = self.pool.get('stock.picking').browse(cr, uid,
+                                                        prod.picking_id)
 
         if picking and picking.state in ['draft,''confirmed']:
             for move in picking.move_lines:

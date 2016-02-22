@@ -37,11 +37,13 @@ class mrp_production(osv.osv):
                     for consume_product in production.move_lines:
                         if consume_product.prodlot_id:
                             lot = consume_product.prodlot_id
+                            break
+                    if lot:
                         values = {
                             'life_date': lot.life_date,
                             'use_date': lot.use_date,
                         }
-                    lot_obj.write(cr, uid, prod_lot_id, values, context)
+                        lot_obj.write(cr, uid, prod_lot_id, values, context)
                 produce_product.write({'prodlot_id': prod_lot_id})
         else:
             prod_lot_id = None
