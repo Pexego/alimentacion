@@ -90,13 +90,13 @@ class mrp_production(osv.osv):
     def check_availability(self, cr, uid, ids, context ):
         if context is None: context = {}
         prod = self.browse(cr, uid, ids)[0]
-        picking = self.pool.get('stock.picking').browse(cr, uid,
-                                                        prod.picking_id)
+        picking = prod.picking_id
 
-        if picking and picking.state in ['draft,''confirmed']:
+        if picking and picking.state in ['confirmed', 'auto']:
             for move in picking.move_lines:
-                if move.state == 'confirmed':
-                    if move.product_id.track_all and not move.product_id.miscible:
+                if move.state in ['confirmed', 'waiting']:
+                    if not move.prodlot_id and move.product_id.track_all and \
+                            not move.product_id.miscible:
                         default_prodlot, prodlot_location, default_qty, split = self.pool.get('stock.production.lot').get_default_production_lot(cr, uid, move.location_id.id, move.product_id.id, self.pool.get('product.uom')._compute_qty(cr, uid, move.product_uom.id, move.product_qty, move.product_id.uom_id.id), deep=True)
 
                         if split:
@@ -115,10 +115,7 @@ class mrp_production(osv.osv):
                                 self.pool.get('stock.move').write(cr, uid, [move.move_dest_id.id], {'prodlot_id': default_prodlot})
                                 if move.move_dest_id.product_id.not_do_procurement and prodlot_location:
                                     self.pool.get('stock.move').write(cr, uid, [move.move_dest_id.id], {'location_id': prodlot_location})
-
-
-
-
+            picking.action_assign(self, cr, uid)
 
 
     def action_produce(self, cr, uid, production_id, production_qty, production_mode, context=None):
