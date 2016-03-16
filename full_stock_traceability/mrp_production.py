@@ -116,7 +116,12 @@ class mrp_production(osv.osv):
                                 if move.move_dest_id.product_id.not_do_procurement and prodlot_location:
                                     self.pool.get('stock.move').write(cr, uid, [move.move_dest_id.id], {'location_id': prodlot_location})
             picking.action_assign(self, cr, uid)
+        else:
+            wf_service = netsvc.LocalService("workflow")
+            wf_service.trg_validate(uid, 'stock.picking', prod.picking_id.id,
+                                    'button_done', cr)
 
+        return True
 
     def action_produce(self, cr, uid, production_id, production_qty, production_mode, context=None):
         res = super(mrp_production, self).action_produce(cr, uid, production_id, production_qty, production_mode, context=context)
